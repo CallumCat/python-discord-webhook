@@ -253,18 +253,28 @@ class DiscordWebhook:
         :keyword str username: override the default username of the webhook
         """
         self.allowed_mentions = kwargs.get("allowed_mentions", [])
+        print(self.allowed_mentions)
         self.attachments = kwargs.get("attachments", [])
+        print(self.attachments)
         self.avatar_url = kwargs.get("avatar_url")
+        print(self.avatar_url)
         self.content = kwargs.get("content")
+        print(self.content)
         self.embeds = kwargs.get("embeds", [])
+        print(self.embeds)
         self.files = kwargs.get("files", {})
+        print(self.files)
         self.id = kwargs.get("id")
+        print(self.id)
         self.proxies = kwargs.get("proxies")
+        print(self.proxies)
         self.rate_limit_retry = kwargs.get("rate_limit_retry", False)
         self.timeout = kwargs.get("timeout")
         self.tts = kwargs.get("timeout", False)
         self.url = url
+        print(self.url)
         self.username = kwargs.get("username", False)
+        print(self.username)
 
     def add_embed(self, embed: Union[DiscordEmbed, Dict[str, Any]]) -> None:
         """
