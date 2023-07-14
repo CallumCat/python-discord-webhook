@@ -56,6 +56,7 @@ class DiscordWebhook:
         adds an embedded rich content
         :param embed: embed object or dict
         """
+        print(self.embeds.append(embed.__dict__ if isinstance(embed, DiscordEmbed) else embed))
         self.embeds.append(embed.__dict__ if isinstance(embed, DiscordEmbed) else embed)
 
     def remove_embed(self, index):
@@ -95,6 +96,7 @@ class DiscordWebhook:
         :param content: content string
         :type content: string
         """
+        print(content)
         self.content = content
 
     @property
@@ -104,6 +106,7 @@ class DiscordWebhook:
         :return webhook data as json:
         """
         embeds = self.embeds
+        print(self.embeds)
         self.embeds = []
         # convert DiscordEmbed to dict
         for embed in embeds:
